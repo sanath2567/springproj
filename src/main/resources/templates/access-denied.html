@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Access Denied</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <script>
+        window.onload = function() {
+            alert('Access Denied! You are not authorized to view this page.');
+            window.location.href = '/home';
+        };
+    </script>
+</head>
+<body>
+</body>
+</html>
