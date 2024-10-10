@@ -1,5 +1,8 @@
-package com.Data.Custom;
+package com.Data.Custom.controller;
 
+import com.Data.Custom.users.Users;
+import com.Data.Custom.users.customUser;
+import com.Data.Custom.repository.userRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

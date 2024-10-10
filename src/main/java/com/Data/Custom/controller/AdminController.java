@@ -1,5 +1,7 @@
-package com.Data.Custom;
+package com.Data.Custom.controller;
 
+import com.Data.Custom.users.Users;
+import com.Data.Custom.service.userService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -11,7 +13,7 @@ import java.util.List;
 @Controller
 public class AdminController {
     @Autowired
-    private  userService service;
+    private userService service;
 
     @GetMapping("/admin")
     @PreAuthorize("hasRole('ADMIN')")

@@ -1,5 +1,7 @@
-package com.Data.Custom;
+package com.Data.Custom.service;
 
+import com.Data.Custom.users.Users;
+import com.Data.Custom.repository.userRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;

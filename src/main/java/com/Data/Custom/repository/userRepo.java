@@ -1,6 +1,7 @@
-package com.Data.Custom;
+package com.Data.Custom.repository;
 
 
+import com.Data.Custom.users.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

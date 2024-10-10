@@ -1,4 +1,4 @@
-package com.Data.Custom;
+package com.Data.Custom.users;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
