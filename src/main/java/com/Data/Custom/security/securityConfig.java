@@ -28,6 +28,7 @@ public class securityConfig {
     }
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
+
         return new BCryptPasswordEncoder();
     }
 
@@ -44,8 +45,8 @@ public class securityConfig {
                 );*/
         http
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/login", "/home").permitAll()
-                        .requestMatchers("/admin/**").hasRole("ADMIN")  // Admin role required for /admin
+                        .requestMatchers("/","/home", "/login","/register").permitAll()
+                        .requestMatchers("/admin").hasRole("ADMIN")  // Admin role required for /admin
                         .anyRequest().authenticated()  // Other requests require authentication
                 )
                 .formLogin(form -> form

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" th:href="@{/css/register.css}">
+</head>
+<body>
+<style>
+    /* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #2c3e50;
+}
+
+/* Container for the Registration Form */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+/* Card-Like Form Container */
+.register-card {
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 360px;
+}
+
+/* Form Heading */
+.register-card h2 {
+    color: #3498db;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Input Labels */
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-bottom: 8px;
+}
+
+/* Input Fields */
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #34495e;
+    background-color: #f9f9f9;
+}
+
+.input-group input:focus {
+    border-color: #3498db;
+    outline: none;
+    background-color: #f1faff;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Register Button */
+.register-button {
+    width: 110%;
+    padding: 12px;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #2980b9;
+}
+
+/* Login Link */
+.login-link {
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+</style>
+<div class="register-container">
+    <div class="register-card">
+        <h2>Create Your Account</h2>
+
+        <!-- Registration Form -->
+        <form action="/register" method="post">
+            <!-- Name Field -->
+            <div class="input-group">
+                <label for="username">Name</label>
+                <input type="text" id="username" name="username" placeholder="Enter your name" required>
+            </div>
+
+            <!-- Password Field -->
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <!-- Confirm Password Field -->
+
+
+            <!-- Register Button -->
+            <button type="submit" class="register-button">Register</button>
+        </form>
+
+        <!-- Already have an account link -->
+        <p class="login-link">Already have an account? <a href="/login">Login here</a></p>
+    </div>
+</div>
+</body>
+</html>

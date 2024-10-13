@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -17,16 +18,24 @@ public class UserController {
     private userService service;
 
     @PostMapping("/register")
-    public ResponseEntity<String> registerUser(@RequestBody Users user) {
+    public String registerUser(@ModelAttribute Users user) {
+        user.setRole("ROLE_USER");
         service.registerUser(user);
-        return ResponseEntity.ok("User registered successfully");
+        return "register";
     }
+    @GetMapping("/register")
+    public String showRegistrationForm() {
+        return "register";
+    }
+
     @GetMapping("/login")
     public String loginPage() {
+
         return "login";
     }
     @GetMapping("/home")
     public String home() {
+
         return "home";
     }
 

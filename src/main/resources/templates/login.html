@@ -102,6 +102,20 @@ h1 {
 .success-message p {
     background-color: #2ecc71;
 }
+    .register-link {
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.register-link a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
 
 </style>
 <div class="login-container">
@@ -128,6 +142,7 @@ h1 {
         <div th:if="${logout}" class="success-message">
             <p th:text="${logout}">You have been logged out successfully.</p>
         </div>
+        <p class="register-link">Does not have any account? <a href="/register">Register Here</a></p>
     </div>
 </div>
 </body>
